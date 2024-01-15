@@ -85,6 +85,14 @@
     max-width: 600px;
 }
 
+/* sponsors */
+.sponsors {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
 /* small responsive */
 @media screen and (max-width:576px) {
     .navbar {
@@ -93,6 +101,13 @@
 
     .banner {
         flex-direction: column-reverse;
+    }
+
+    .sponsors {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
 }
 
@@ -105,5 +120,9 @@
 
     .banner-content {
         padding: 0 20px;
+    }
+
+    .sponsors {
+        width: 100%;
     }
 }
