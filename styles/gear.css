@@ -1,9 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* shared styles */
 * {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
+}
+
+/* header  related styles */
+/* navigation */
+.header {
+    border: 2px solid tomato;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 310px;
+}
+
+.nav-anchors {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-anchor-titles>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-title {
+    color: #3A3A3A;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-anchor-titles {
+    color: #3A3A3A;
+    font-weight: 600;
+}
+
+/* banner */
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-title {
+    color: #3A3A3A;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.banner-text {
+    color: #3A3A3A;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.banner-button {
+    border: none;
+    padding: 10px 24px;
+    border-radius: 41px;
+    background: #E02C6D;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.banner-image {
+    position: relative;
+    bottom: 50px;
+    background-image: url("../images/Circle\ design.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+/* small responsive */
+@media screen and (max-width:576px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:960px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .banner-content {
+        padding: 0 20px;
+    }
 }
